@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: activity-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: activity-service
+  template:
+    metadata:
+      labels:
+        app: activity-service
+    spec:
+      containers:
+      - name: activity-service
+        image: your-dockerhub-username/activity-service:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: KAFKA_BROKERS
+          value: "kafka-service:9092"
+        - name: MONGO_URI
+          value: "mongodb://mongodb-service:27017/user-activities"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 10
