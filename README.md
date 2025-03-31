@@ -15,19 +15,19 @@ The Project has 3 core components
 
 ![system design](https://github.com/omerawwad/event-driven-microservic/blob/main/designs/archt.jpg)
 
-Data Flow
+### Data Flow
 - Event Production:
 
-Client applications send user activity events via REST API
+-- Client applications send user activity events via REST API
 
-Service publishes events to Kafka topics
+-- Service publishes events to Kafka topics
 
 - Event Consumption:
 
-Kafka consumers process events in real-time
+-- Kafka consumers process events in real-time
 
-Processed data is stored in MongoDB with proper indexing
+-- Processed data is stored in MongoDB with proper indexing
 
 - Data Querying:
 
-Clients fetch processed data via REST API with pagination/filtering
+- - Clients fetch processed data via REST API with pagination/filtering
