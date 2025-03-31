@@ -18,9 +18,9 @@ The Project has 3 core components
 ### Data Flow
 - Event Production:
 
--- Client applications send user activity events via REST API
+ - Client applications send user activity events via REST API
 
--- Service publishes events to Kafka topics
+> - Service publishes events to Kafka topics
 
 - Event Consumption:
 
