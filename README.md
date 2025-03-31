@@ -3,9 +3,6 @@
 
 This project implements a scalable event-driven microservice architecture using Node.js, TypeScript, Kafka for event streaming, MongoDB for data persistence, Docker for containerization, and Kubernetes for orchestration. The service processes user activity logs in real-time and provides REST APIs for querying processed data.
 
-### Demo Video
-
-
 
 ### Installation
 
@@ -76,4 +73,9 @@ The Project has 3 core components
 - Scalability: Horizontal scaling with Kubernetes
 - Type Safety: Full TypeScript support
 - Observability: Logging and metrics integration
+
+### Notes
+
+Best practice for deployment is to use AWS EKS (Elastic Kubernetes Service), but not in the free tier.
+> Amazon Elastic Kubernetes Service (EKS) is a managed Kubernetes service by AWS that allows you to deploy, scale, and operate containerized applications using Kubernetes without having to manage the control plane.
 
