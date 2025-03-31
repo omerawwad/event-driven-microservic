@@ -76,3 +76,14 @@ The Project has 3 core components
 - Scalability: Horizontal scaling with Kubernetes
 - Type Safety: Full TypeScript support
 - Observability: Logging and metrics integration
+
+### Project Structure
+
+```
+src/
+├── domain/              # Domain models and business logic
+├── infrastructure/      # Kafka, MongoDB implementations
+├── application/         # Use cases and service layer
+├── interfaces/          # REST API controllers
+└── shared/              # Common utilities and configs
+```
