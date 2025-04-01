@@ -85,6 +85,8 @@ The app is already deployed on AWS EC2 Free Tier Server, but Kafka requiers 16 G
 
 #### NGINX
 
+![NGINX](https://github.com/omerawwad/event-driven-microservic/blob/main/designs/NGINX.jpg)
+
 Act as a 
 - server with secured SSL to scure HTTPS communication
 - proxy 
