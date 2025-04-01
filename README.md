@@ -79,3 +79,17 @@ The Project has 3 core components
 Best practice for deployment is to use AWS EKS (Elastic Kubernetes Service), but not in the free tier.
 > Amazon Elastic Kubernetes Service (EKS) is a managed Kubernetes service by AWS that allows you to deploy, scale, and operate containerized applications using Kubernetes without having to manage the control plane.
 
+### Deployment
+
+The app is already deployed on AWS EC2 Free Tier Server, but Kafka requiers 16 GB RAM or more and using `t2.micro` incountered jvm memory issues.  
+
+#### NGINX
+
+Act as a 
+- server with secured SSL to scure HTTPS communication
+- proxy 
+- internal load balancer
+
+SSL Self Certificate Using OpenSSL
+
+#### AWS Load Balancer
